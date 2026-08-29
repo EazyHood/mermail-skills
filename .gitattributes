@@ -1,0 +1,6 @@
+# Keep LF in the working tree. tests/validate.mjs matches skill frontmatter with
+# a pattern anchored on a bare newline, which does not match CRLF. Git defaults to
+# core.autocrlf=true on Windows, so without this file a clean clone there fails
+# npm test before any change is made.
+* text=auto eol=lf
+*.png binary
