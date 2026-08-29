@@ -1,0 +1,11 @@
+interface:
+  display_name: "Mermail Invoice Guard"
+  short_description: "Handle inbound payment demands without letting email authorize a payment"
+  default_prompt: "Use $mermail-invoice-guard when inbound mail asks the agent to pay an invoice, change supplier bank details, or release funds, and the workspace has an Agent Wallet that mail could reach."
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "mermail"
+      description: "Mermail workspace and mailbox MCP server"
+      transport: "streamable_http"
+      url: "https://console.mermail.app/mcp"
